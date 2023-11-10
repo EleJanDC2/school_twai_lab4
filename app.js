@@ -23,9 +23,14 @@ const dataChart2 = service.convertData(temp);
 
 const chart2 = JSON.stringify(dataChart2);
 
+const products = [
+    { name: 'Laptop', price: 1000 },
+    { name: 'Smartphone', price: 500 },
+    { name: 'Tablet', price: 300 }
+];
 
 app.get('/', (request, response) => {
-    response.render(__dirname + '/index.html', {subject: 'Technologie webowe w aplikacjach Internetu', chart1: JSON.stringify(chart1) , chart2: JSON.stringify(dataChart2)})
+    response.render(__dirname + '/index.html', {subject: 'Technologie webowe w aplikacjach Internetu', chart1: JSON.stringify(chart1) , chart2: JSON.stringify(dataChart2), products})
 })
 
 
